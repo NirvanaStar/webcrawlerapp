@@ -18,8 +18,6 @@ router.get('/', function(req, res, next) {
   var name = data['name'] || "";
   var cate = data['category'] || "";
 
-  console.log(name);
-
   Apps.search({
 	    query: {
         bool: {
@@ -34,7 +32,6 @@ router.get('/', function(req, res, next) {
     if (err) {
       console.log(err);
     }
-    console.log("fwfew");
     res.send(200, JSON.stringify(results.hits.hits));
   });
 });

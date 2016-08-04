@@ -35283,7 +35283,11 @@
 	        _react2.default.createElement(
 	          'td',
 	          null,
-	          appData._source.title
+	          _react2.default.createElement(
+	            'a',
+	            { href: appData._source.appurl },
+	            appData._source.title
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'td',
@@ -35298,7 +35302,7 @@
 	        _react2.default.createElement(
 	          'td',
 	          null,
-	          appData._source.appurl
+	          _react2.default.createElement('img', { src: appData._source.imgurl, alt: appData._source.title })
 	        )
 	      );
 	    }
@@ -35332,7 +35336,7 @@
 	            _react2.default.createElement(
 	              'th',
 	              null,
-	              'URL'
+	              'Icon'
 	            )
 	          )
 	        ),

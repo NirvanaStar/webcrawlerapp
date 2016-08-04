@@ -6,10 +6,10 @@ class AppList extends Component {
   renderApp(appData){
     return (
       <tr key={appData._id}>
-        <td>{appData._source.title}</td>
+        <td><a href={appData._source.appurl}>{appData._source.title}</a></td>
         <td>{appData._source.category}</td>
         <td>{appData._source.rating}</td>
-        <td>{appData._source.appurl}</td>
+        <td><img src={appData._source.imgurl}  alt={appData._source.title} /></td>
       </tr>
     )
   }
@@ -22,7 +22,7 @@ class AppList extends Component {
               <th>Name</th>
               <th>Category</th>
               <th>Rating</th>
-              <th>URL</th>
+              <th>Icon</th>
             </tr>
           </thead>
           <tbody>
