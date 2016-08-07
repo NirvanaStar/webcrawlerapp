@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var AppSchema = new Schema({
   category: {
     type: String,
-    es_indexed: 'not_analyzed',
+    es_indexed: true,
     es_type: 'string'
   },
   rating: {
@@ -25,11 +25,8 @@ var AppSchema = new Schema({
   },
   title: {
     type: String,
-    es_type: 'multi_field',
-    es_fields: {
-      multi_field: { type: 'string', index: 'not_analyzed' },
-      untouched: { type: 'string', index: 'not_analyzed' }
-    }
+    es_indexed: true,
+    es_type: 'string'
   },
   developerrec: {
     type: [String],
