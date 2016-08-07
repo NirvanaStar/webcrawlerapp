@@ -33,7 +33,8 @@ crawler
 ```
 
 toplist_spider.py defines how to crawl the webpages.  
-items.py defines the data fields which stored in MongoDB.  pipelines.py defines the store process in MongoDB
+items.py defines the data fields which stored in MongoDB.  
+pipelines.py defines the store process in MongoDB
 
 Run scrapy crawl toplist   
 
